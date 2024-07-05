@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import helmet from 'helmet';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import postRoutes from './routes/Post.route.js';
@@ -19,7 +18,6 @@ const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
-app.use(helmet()); // Security headers
 app.use(cookieParser());
 app.use(express.json());
 app.use(morgan('dev')); // Logger
