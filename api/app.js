@@ -8,28 +8,15 @@ import testRoutes from './routes/Test.route.js';
 import userRoutes from './routes/User.route.js';
 import chatRoutes from './routes/Chat.route.js';
 import messageRoute from './routes/Message.route.js';
-<<<<<<< HEAD
 import path from 'path';
 
 
-=======
-
->>>>>>> 05896ba65844ff37e70ea0a12da7b54ad70d28bd
 // Load environment variables from .env file
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-<<<<<<< HEAD
-=======
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
-
->>>>>>> 05896ba65844ff37e70ea0a12da7b54ad70d28bd
 // Middleware
 app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
 app.use(cookieParser());
