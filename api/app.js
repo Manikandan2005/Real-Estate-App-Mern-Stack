@@ -29,7 +29,7 @@ app.use(express.json());
 // Routes
 
 app.get("/", (req, res) => {
-  res.json({ message: "Your Backend is running ;) Go and navigate in frontend url. Username : Manikandan, Password: 123 for log in , you can also if you wish" });
+  res.json({ message: "Your Backend is running ,Go and navigate in frontend url. Username : Manikandan, Password: 123 for log in , you can also if you wish" });
 });
 
 app.use('/posts', postRoutes);
