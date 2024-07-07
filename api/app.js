@@ -27,6 +27,10 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
+app.use("/",(req,res)=>{
+  res.json({message:"/posts for getting posts"});
+})
+
 app.use('/posts', postRoutes);
 app.use('/auth', authRoutes);
 app.use('/test', testRoutes);
