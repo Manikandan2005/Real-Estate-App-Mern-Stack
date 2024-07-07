@@ -16,7 +16,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Middleware
-app.use(cors({ origin:["https://real-estate-app-mern-stack.vercel.app"], credentials: true }));
+app.use(cors({ origin:["https://real-estate-app-mern-stack-o220vmd3l-manikandans-projects.vercel.app"], credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 
