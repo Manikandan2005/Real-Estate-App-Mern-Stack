@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "real-estate-app-mern-stack-dlnp9hazw-manikandans-projects.vercel.app",
+  baseURL: "https://real-estate-app-mern-stack.vercel.app",
   withCredentials: true,
 });
 
