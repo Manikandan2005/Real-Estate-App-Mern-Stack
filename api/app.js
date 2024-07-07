@@ -22,7 +22,7 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-
+//ahh
 app.use(cookieParser());
 app.use(express.json());
 
