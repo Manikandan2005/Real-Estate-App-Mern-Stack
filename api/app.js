@@ -8,8 +8,6 @@ import testRoutes from './routes/Test.route.js';
 import userRoutes from './routes/User.route.js';
 import chatRoutes from './routes/Chat.route.js';
 import messageRoute from './routes/Message.route.js';
-import path from 'path';
-
 
 // Load environment variables from .env file
 dotenv.config();
@@ -21,7 +19,6 @@ const PORT = process.env.PORT || 8000;
 app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
-
 
 // Routes
 app.use('/posts', postRoutes);
