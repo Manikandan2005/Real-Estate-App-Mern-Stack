@@ -1,10 +1,11 @@
 import Chat from "../../components/chat/Chat";
 import List from "../../components/list/List";
 import "./profilepage.scss";
-import apiRequest from "../../lib/apiRequest";
+
 import { Await, Link, useLoaderData, useNavigate } from "react-router-dom";
 import { Suspense, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import apiRequest from "../../lib/apiRequest";
 
 function ProfilePage() {
   const data = useLoaderData();
