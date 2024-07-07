@@ -27,6 +27,11 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
+
+app.get("/", (req, res) => {
+  res.json({ message: "Your Backend is running ;) Go and navigate in frontend url. Username : Manikandan, Password: 123 for log in , you can also if you wish" });
+});
+
 app.use('/posts', postRoutes);
 app.use('/auth', authRoutes);
 app.use('/test', testRoutes);
@@ -34,9 +39,6 @@ app.use('/users', userRoutes);
 app.use('/chats', chatRoutes);
 app.use('/messages', messageRoute);
 
-app.get("/", (req, res) => {
-  res.json({ message: "Your Backend is running ;)" });
-});
 
 // Catch-all route for undefined endpoints
 app.use((req, res) => {
