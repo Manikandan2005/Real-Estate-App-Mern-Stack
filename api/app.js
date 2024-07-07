@@ -1,15 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import helmet from 'helmet';
 import dotenv from 'dotenv';
-import morgan from 'morgan';
 import postRoutes from './routes/Post.route.js';
 import authRoutes from './routes/Auth.route.js';
 import testRoutes from './routes/Test.route.js';
 import userRoutes from './routes/User.route.js';
 import chatRoutes from './routes/Chat.route.js';
 import messageRoute from './routes/Message.route.js';
+import path from 'path';
+
 
 // Load environment variables from .env file
 dotenv.config();
@@ -19,10 +19,9 @@ const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
-app.use(helmet()); // Security headers
 app.use(cookieParser());
 app.use(express.json());
-app.use(morgan('dev')); // Logger
+
 
 // Routes
 app.use('/posts', postRoutes);
