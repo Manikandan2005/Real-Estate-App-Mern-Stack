@@ -16,11 +16,14 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
+app.use(cors({ origin:["https://real-estate-app-mern-stack.vercel.app/"], credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
 
 
+app.use("/",(req,res)=>{
+  res.json("hello");
+})
 // Routes
 app.use('/posts', postRoutes);
 app.use('/auth', authRoutes);
