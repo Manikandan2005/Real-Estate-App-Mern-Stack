@@ -14,7 +14,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-const FRONTEND_URL = process.env.FRONTEND_URL || "https://real-estate-app-mern-stack-9ff5.vercel.app";
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://real-estate-app-mern-stack.vercel.app";
 
 // Middleware
 app.use(cors({
