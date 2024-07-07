@@ -14,13 +14,17 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+const FRONTEND_URL = process.env.FRONTEND_URL || "https://real-estate-app-mern-stack.vercel.app";
 
 // Middleware
-app.use(cors({ origin: process.env.CLIENTURL, credentials: true }));
+app.use(cors({
+  origin: [FRONTEND_URL],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(cookieParser());
 app.use(express.json());
-
-
 
 // Routes
 app.use('/posts', postRoutes);
